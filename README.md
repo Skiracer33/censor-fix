@@ -1,5 +1,7 @@
 ## CensorFix
 
+[![Documentation Status](https://readthedocs.org/projects/censor-fix/badge/?version=latest)](https://censor-fix.readthedocs.io/en/latest/?badge=latest)
+
 A library for multiple imputation of censored data.
 
 
