@@ -2,8 +2,11 @@
 
 [![Documentation Status](https://readthedocs.org/projects/censor-fix/badge/?version=latest)](https://censor-fix.readthedocs.io/en/latest/?badge=latest)
 
-A library for multiple imputation of censored data.
 
+Please look at the website https://censor-fix.readthedocs.io/en/latest/
+
+
+A library for multiple imputation of censored data.
 
 This software performs multiple imputation on censored data using the probabilistic programming langauge (ppl) stan. 
 For 1d imputation the library can fits a distribution to data to create imputations. 
