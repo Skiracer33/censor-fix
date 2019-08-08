@@ -6,3 +6,4 @@ pystan
 joblib
 matplotlib
 tqdm
+pandas
