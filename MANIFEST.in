@@ -1,0 +1,4 @@
+include README.md
+include stan_compiled
+include stan_code
+include stan_code/*

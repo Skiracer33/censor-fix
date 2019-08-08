@@ -1,0 +1,15 @@
+stan_compiled/*.stanc
+stan_compiled/*.stan
+stan_compiled
+__pycache__
+assets/*
+build/*
+censor_fix.egg-info/*
+dist/*
+docs/build/*
+docs/source/_build/*
+.vscode
+notebooks/*
+_build/*
+.ipynb_checkpoints
+source/_build/*
