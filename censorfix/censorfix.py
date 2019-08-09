@@ -186,6 +186,7 @@ class censorImputer():
         def select_columns(i):  # selects which columns to use
             if self.no_columns == 'all':
                 return list(range(i)) + list(range(i + 1, no_features))
+            return 'error not implemented yet' #TODO
 
         #single imputations
         if self.number_imputations==1:

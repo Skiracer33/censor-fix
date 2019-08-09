@@ -14,9 +14,9 @@ setup(
     author_email='rowan.swiers@astrazeneca.com',
     license='MIT',
     install_requires=[
-        'numpy>=1.16',
-        'pandas>=0.24',
-        'joblib>=0.13',
+        'numpy',
+        'pandas',
+        'joblib',
         'tqdm',
         'pystan',
         'sklearn'
