@@ -1,7 +1,7 @@
-Compilation Information
+Compilation API
 ======================================
  
- This is the tutorial Welcome
+The API for compilation. Created automatically at the start of the program
 
  .. automodule:: compile_stan
    :members:

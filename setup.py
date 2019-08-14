@@ -7,9 +7,10 @@ def readme():
 package_name='censor-fix'
 setup(
     name='censor-fix',
-    version='0.0.1',
-    description='A library for multiple imputaion of censored data',
+    version='0.0.2',
+    description='A library for multiple imputation of censored data',
     long_description=readme(),
+    long_description_content_type='text/markdown',
     author='Rowan Swiers',
     author_email='rowan.swiers@astrazeneca.com',
     license='MIT',

@@ -1,7 +1,7 @@
-Censorfix tests and examples
+Censorfix tests
 ======================================
  
- Description of the tests and examples
+ Some tests to check everything is working
 
  .. automodule:: test_censor
    :members:

@@ -2,21 +2,21 @@
 
 [![Documentation Status](https://readthedocs.org/projects/censor-fix/badge/?version=latest)](https://censor-fix.readthedocs.io/en/latest/?badge=latest)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Please look at the website https://censor-fix.readthedocs.io/en/latest/
+
+Examples Notebooks and API are found at the website https://censor-fix.readthedocs.io/en/latest/
 
 
 A library for multiple imputation of censored data.
 
-This software performs multiple imputation on censored data using the probabilistic programming langauge (ppl) stan. 
-For 1d imputation the library can fits a distribution to data to create imputations. 
-
-For missing data with many features the library can model the censored values using the other features in a round robin fashion
+This software performs multiple imputation on censored data using the probabilistic programming langauge stan. 
+The library can fits distributions to censored data and produces imputations based on the results.
 
 How to use:
 
-The data needs to be in a pandas dataframe and the columns that need imputing must be specified.
-The data is assumed to have a normal distribution unless stated otherwise but there are options for the data to be uniform,t distributed or exponential. To make the data more normal you can try using sklearn.reprocessing.power_transform to make the data normal. 
+The data is assumed to have a normal distribution unless stated otherwise but there are options for the data to be uniform,t distributed or exponential.Consider preprocessing 
+using a power transform such as sklearn.reprocessing.power_transform before applying the algorithm.
 
 
 

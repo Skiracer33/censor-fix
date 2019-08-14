@@ -10,11 +10,13 @@ Welcome to censor-fix's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   tutorial
-   censorfix
-   compile_stan
-   test_censor
+   landing
    examples
+   censorfix
+   test_censor
+   compile_stan
+
+   
 
 
 

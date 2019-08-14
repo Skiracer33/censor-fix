@@ -6,7 +6,7 @@ from censorfix import censorfix
 
 def create_data():
     """
-    returns two dataframes a copy of one another
+    returns two dataframes a copy of each another
     """
     c = 0.5
     n = 3
@@ -21,7 +21,7 @@ def create_data():
 
 def single_dim_test():
     """
-    Test censorfix in one d 
+    Test censorfix in one dimension 
     with a gaussian distribution of data
     """
     df, df2 = create_data() 
@@ -44,8 +44,8 @@ def single_dim_test():
 def multi_imp_test(plot=True):
     """
     Tests the creation of multiple imputations
-    plots results or returns dataframe and the imputed dat
-    assumes gaussian distribution
+    plots results or returns dataframe and the imputed data
+    with gaussian distribution
     """
     df, df2 = create_data()
     # censor the first dataframe
@@ -79,7 +79,7 @@ def multi_imp_test(plot=True):
 
 def multi_dim_test():
     """
-    Test censorfix for multiple imputation of multiple dimensions
+    Test censorfix for doing multiple imputation of multivariate
     gaussian distribution
     """
     df, df2 = create_data() 

@@ -1,7 +1,7 @@
-Main methods
+Imputer API
 ======================================
 
-This is api for the imputation class
+This is the API for the imputer class.
 
  .. autoclass:: censorfix.censorImputer
    :members:

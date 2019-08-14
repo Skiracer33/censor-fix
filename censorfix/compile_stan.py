@@ -9,10 +9,11 @@ stan_code = os.path.dirname(__file__) + '/../stan_code/'
 
 def compile_code(code, code_name):
     """
-   Compile a stan code in the stan_code directory store in stan_compiled directory
-   Avoids repeat compilation by checking hashes
+    Compile a stan code in the stan_code directory store in stan_compiled directory
+    Avoids repeat compilation by checking hashes
 
-    parameters 
+    Parameters
+    ----------
     code_name: string
         the name of the stan code to compile
     code: string
