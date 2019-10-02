@@ -9,7 +9,7 @@ stan_code = os.path.dirname(__file__) + '/../stan_code/'
 
 def compile_code(code, code_name):
     """
-    Compile a stan code in the stan_code directory store in stan_compiled directory
+    Compiles stan code in the stan_code directory store in stan_compiled directory
     Avoids repeat compilation by checking hashes
 
     Parameters
@@ -34,6 +34,7 @@ def compile_all():
     Runs compile_code on all the stan codes in the stan code directory
     """
     print('This may take several minutes')
+    print('The compilation only happens the first time the program is run')
     files = os.listdir(stan_code)
     for f in files:
         if '.st' in f:

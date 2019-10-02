@@ -24,10 +24,10 @@ class censorImputer():
                  imputation_order='ascending',
                  number_imputations=1):
         """
-        Multivariate imputer that handles censored values
+        Multivariate imputer that multiply imputes censored values.
 
-        This is a strategy for dealing with missing and censored values in data sets. It can handle both lower and upper censoring
-        points.
+        This is a strategy for dealing with missing and censored values in data sets.
+        It can handle both lower and upper censoring points.
 
         Parameters
         ----------
@@ -36,7 +36,7 @@ class censorImputer():
         distribution : gaussian, t-distribution, skew normal
             the distribution to use for the experiment 
         missing_values : str
-            the placeholder for missing vlaues these will be imputed
+            the placeholder for missing values that will be imputed
         max_iter : int
             the number of cycles
         no_columns : int
@@ -78,7 +78,7 @@ class censorImputer():
         
     def impute_once(self, y, X, U, L):
         """
-        impute one column of censored values using STAN program with chosen options
+        impute one column of censored values using Stan with chosen options
 
         Parameters
         ----------
@@ -159,13 +159,13 @@ class censorImputer():
         right_cen : a list of doubles
             the right censoring points of the data NA if no censoring
         left_cen : list of doubles 
-            of the left censoring points of the data NA if no censoring
+             the left censoring points of the data NA if no censoring
         iter_val : int
             the number of imputation rounds to perform
         Returns
         -------
         array
-            Dataset of with imputed values
+            Dataset with imputed values
         """
         no_features = data.shape[1]
         
@@ -208,7 +208,7 @@ class censorImputer():
                                                 right_cen[i], left_cen[i])
             i=0
             for j in range(self.number_imputations):         
-                ret.append(data.sort_values(by=data.columns[i], ascending=True).copy()) #create the imputations
+                ret.append(data.sort_values(by=data.columns[i], ascending=True).copy()) 
             for data in ret:
                 data = self.impute_once(data.iloc[:, i],
                                         data.iloc[:, select_columns(i)],
