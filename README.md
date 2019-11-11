@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-Example Notebooks and API and documentation are available [here](https://censor-fix.readthedocs.io/en/latest/)
+Example Notebook and API and documentation are available [here](https://censor-fix.readthedocs.io/en/latest/)
 
 
 ### A library for multiple imputation of censored data.

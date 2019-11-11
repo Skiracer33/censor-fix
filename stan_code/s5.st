@@ -1,3 +1,4 @@
+// Stan Code for T distribution
 data {
     int<lower=0> N_obs; //number of observations
     int<lower=0> N_cens_right; //number of censored right values

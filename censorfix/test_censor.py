@@ -6,7 +6,7 @@ from censorfix import censorfix
 
 def create_data():
     """
-    returns two dataframes a copy of each another
+    Returns two dataframes a copy of each other
     """
     c = 0.5
     n = 3

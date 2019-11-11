@@ -1,3 +1,4 @@
+// Stan code for Skew Normal
 data {
     int<lower=0> N_obs; //number of observations
     int<lower=0> N_cens_right; //number of censored right values
@@ -30,11 +31,11 @@ model {
     }
 
     for (i in 1:N_obs){
-        y_obs[i] ~ normal(xi, mu + x_obs[i+N_cens_left] * alpha , sigma);
+        y_obs[i] ~ skew_normal(xi, mu + x_obs[i+N_cens_left] * alpha , sigma);
     }
 
     for (i in 1:N_cens_right){
-        y_cens_right[i] ~ normal(xi, mu + x_obs[i+N_obs+N_cens_left] * alpha, sigma);
+        y_cens_right[i] ~ skew_normal(xi, mu + x_obs[i+N_obs+N_cens_left] * alpha, sigma);
     }
     
 }

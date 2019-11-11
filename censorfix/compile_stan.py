@@ -17,7 +17,7 @@ def compile_code(code, code_name):
     code_name: string
         the name of the stan code to compile
     code: string
-         the code locatoin 
+         the code location 
     """
     hash_name = hashlib.md5(code.encode('utf-8')).hexdigest()[0:10]
     if not os.path.exists(stan_compiled + hash_name + '.stanc'): #check if compilation already exists

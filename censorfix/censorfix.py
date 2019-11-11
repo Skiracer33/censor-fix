@@ -33,7 +33,7 @@ class censorImputer():
         ----------
         sample_posterior : bool
             whether to use the best prediction at each step or a bayesian imputation
-        distribution : gaussian, t-distribution, skew normal
+        distribution : gaussian, t-distribution, skew-normal, exponential
             the distribution to use for the experiment 
         missing_values : str
             the placeholder for missing values that will be imputed
@@ -42,7 +42,7 @@ class censorImputer():
         no_columns : int
             how many columns to use for the imputation
         stan_iterations : int
-            number of iterations for Stan to run default works well
+            number of iterations for Stan to run
         imputation_order : str ascending
             the order of imputations 
         debug: bool
@@ -65,12 +65,16 @@ class censorImputer():
         self.debug = debug
         self.n_jobs = n_jobs
         self.number_imputations=number_imputations
-        if distribution == 'gaussian':
+        if distribution == 'exponential':
+            self.stan_model =joblib.load(stan_dir + 's2.stan')
+        elif distribution == 'gaussian':
             self.stan_model = joblib.load(stan_dir + 's3.stan')
-        if distribution == 'skew normal distribution':
+        elif distribution == 'skew-normal':
             self.stan_model = joblib.load(stan_dir + 's4.stan') 
-        if distribution == 't_distribution':
+        elif distribution == 't-distribution':
             self.stan_model = joblib.load(stan_dir + 's5.stan') 
+        else:
+            print('Illegal distribution specified')
 
         if not sample_posterior and number_imputations!=1:
             print('error posterior sampling needs to be enabled if doing multiple imputation ')
@@ -156,7 +160,7 @@ class censorImputer():
         ----------
         data : pandas dataframe
             the data as a pandas dataframe
-        right_cen : a list of doubles
+        right_cen : list of doubles
             the right censoring points of the data NA if no censoring
         left_cen : list of doubles 
              the left censoring points of the data NA if no censoring
